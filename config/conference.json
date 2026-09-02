@@ -1,11 +1,11 @@
 {
-  "slug": "conference-2026",
-  "name": "Conference 2026",
-  "atlas_title": "Conference Atlas",
+  "slug": "eccv-2026",
+  "name": "ECCV 2026",
+  "atlas_title": "ECCV Atlas 2026",
   "year": 2026,
   "locale": "en",
-  "timezone": "UTC",
-  "repository": "KimYeongHyeon/Conference_Atlas_Template",
-  "official_url": "https://example.org",
-  "public_note": "Unofficial public browser built from cited public sources."
+  "timezone": "Europe/Stockholm",
+  "repository": "KimYeongHyeon/ECCV_2026_Browser",
+  "official_url": "https://eccv.ecva.net/Conferences/2026/",
+  "public_note": "Unofficial ECCV 2026 browser built from cited public sources."
 }
