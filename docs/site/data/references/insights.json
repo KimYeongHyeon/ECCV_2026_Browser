@@ -1,79 +1,12 @@
 {
-  "generatedAt": "2026-09-02T13:45:51.261Z",
-  "sourceManifestGeneratedAt": "2026-09-02T13:45:51.261Z",
+  "generatedAt": "2026-09-02T15:03:02.172Z",
+  "sourceManifestGeneratedAt": "2026-09-02T15:03:02.172Z",
   "summary": {
-    "edgeCount": 1,
-    "communityCount": 1
+    "edgeCount": 0,
+    "communityCount": 0
   },
-  "recordIndex": {
-    "demo-llm-1": true,
-    "demo-llm-2": true
-  },
-  "bridgePairs": [
-    {
-      "id": "bridge-1",
-      "leftRecordId": "demo-llm-1",
-      "rightRecordId": "demo-llm-2",
-      "sharedCount": 2,
-      "score": 0.6667,
-      "sharedReferences": [
-        {
-          "title": "Vaswani et al",
-          "key": "1 vaswani et al attention is all you need neurips 2017"
-        },
-        {
-          "title": "[2] He et al. Deep Residual Learning for Image Recognition. CVPR 2015.",
-          "key": "2 he et al deep residual learning for image recognition cvpr 2015"
-        }
-      ]
-    }
-  ],
-  "communities": [
-    {
-      "id": "community-1",
-      "label": "Efficiency",
-      "recordIds": [
-        "demo-llm-1",
-        "demo-llm-2"
-      ],
-      "representativeRecordIds": [
-        "demo-llm-1",
-        "demo-llm-2"
-      ],
-      "edgeCount": 1,
-      "maxSharedCount": 2,
-      "areaTags": [
-        "Efficiency"
-      ],
-      "domainTags": []
-    }
-  ],
-  "sharedFoundations": [
-    {
-      "key": "1 vaswani et al attention is all you need neurips 2017",
-      "title": "Vaswani et al",
-      "count": 2,
-      "citingRecordIds": [
-        "demo-llm-1",
-        "demo-llm-2"
-      ],
-      "areaTags": [
-        "Efficiency"
-      ],
-      "domainTags": []
-    },
-    {
-      "key": "2 he et al deep residual learning for image recognition cvpr 2015",
-      "title": "[2] He et al. Deep Residual Learning for Image Recognition. CVPR 2015.",
-      "count": 2,
-      "citingRecordIds": [
-        "demo-llm-1",
-        "demo-llm-2"
-      ],
-      "areaTags": [
-        "Efficiency"
-      ],
-      "domainTags": []
-    }
-  ]
+  "recordIndex": {},
+  "bridgePairs": [],
+  "communities": [],
+  "sharedFoundations": []
 }

@@ -1,109 +1,368 @@
 {
-  "generatedAt": "2026-09-02T13:45:51.261Z",
+  "generatedAt": "2026-09-02T15:03:02.172Z",
   "source": {
-    "recordCount": 6,
+    "recordCount": 2864,
     "method": "cluster-summary/v1"
   },
   "trends": [
     {
       "id": "trend-1",
-      "name": "Efficiency Language Models",
-      "clusterLabel": "Efficiency Language Models",
+      "name": "Video Avatar Generation",
+      "clusterLabel": "Video Avatar Generation",
       "clusterId": "c1",
-      "size": 3,
-      "summary": "We fine-tune language models with 4-bit quantized LoRA adapters under a strict memory budget.",
+      "size": 532,
+      "summary": "To address these challenges, we propose InteractiveAvatar, a real-time infinite-streaming video generation framework that supports visually consistent avatar video generation and intent-aware interactions.",
       "keywords": [
-        "efficiency",
-        "language",
-        "language models",
-        "memory",
-        "draft"
+        "video",
+        "avatar",
+        "video generation",
+        "avatar dynamic",
+        "generation avatar"
       ],
-      "coreQuestion": "What should I read first to understand efficiency language models in this corpus?",
+      "coreQuestion": "What should I read first to understand video avatar generation in this corpus?",
       "representativeMethodology": "Embedding-neighborhood cluster summary",
       "subBranches": [
-        "efficiency",
-        "language",
-        "language models",
-        "memory",
-        "draft"
+        "video",
+        "avatar",
+        "video generation",
+        "avatar dynamic",
+        "generation avatar"
       ],
       "representativeRecordIds": [
-        "demo-llm-1",
-        "demo-llm-2",
-        "demo-llm-3"
+        "eccv-5883",
+        "eccv-3884",
+        "eccv-5681",
+        "eccv-3671",
+        "eccv-5114"
       ],
       "firstReadRecordIds": [
-        "demo-llm-1",
-        "demo-llm-2",
-        "demo-llm-3"
+        "eccv-5883",
+        "eccv-3884",
+        "eccv-5681"
       ],
       "representativeSentences": [
-        "We fine-tune language models with 4-bit quantized LoRA adapters under a strict memory budget.",
-        "We study efficient serving of long-context language models with sparse attention.",
-        "A chunked KV-cache scheduler keeps memory bounded while preserving answer quality on long-document benchmarks."
+        "To address these challenges, we propose InteractiveAvatar, a real-time infinite-streaming video generation framework that supports visually consistent avatar video generation and intent-aware interactions.",
+        "Generating talking avatars is a fundamental task in video generation.",
+        "To bridge this gap, we introduce CLVG-Bench, an evaluation framework designed to probe video models' zero-shot reasoning capabilities via Context Learning in Video Generation."
       ],
       "areaCounts": [
         {
-          "label": "Efficiency",
-          "count": 3
+          "label": "Video Generation, Avatars & Dynamic Worlds",
+          "count": 247
+        },
+        {
+          "label": "Multimodal, Video & Document Understanding",
+          "count": 176
+        },
+        {
+          "label": "3D Graphics and Geometric Representations",
+          "count": 106
+        },
+        {
+          "label": "Video Understanding, Generation and Multimodal Learning",
+          "count": 2
+        },
+        {
+          "label": "Video Understanding, Generation and Multimodal Learning ⋅ Multimodal, Video & Document Understanding",
+          "count": 1
         }
       ],
       "domainCounts": [
         {
           "label": "General",
-          "count": 3
+          "count": 532
         }
       ]
     },
     {
       "id": "trend-2",
-      "name": "Medical Imaging Organ",
-      "clusterLabel": "Medical Imaging Organ",
+      "name": "Gaussian Splatting Reconstruction",
+      "clusterLabel": "Gaussian Splatting Reconstruction",
       "clusterId": "c2",
-      "size": 3,
-      "summary": "We evaluate foundation models for abdominal CT organ segmentation across eight hospitals.",
+      "size": 531,
+      "summary": "To bridge the domain gap between natural scene reconstruction and medical volumetric rendering, we introduce Anatomy-Guided Priming (AGP), which incorporates segmentation masks and transfer functions as structural and appearance priors, information that existing Gaussian splatting methods overlook.",
       "keywords": [
-        "medical",
-        "imaging",
-        "medical imaging",
-        "organ",
-        "learn"
+        "gaussian",
+        "splatting",
+        "gaussian splatting",
+        "reconstruction",
+        "rendering"
       ],
-      "coreQuestion": "What should I read first to understand medical imaging organ in this corpus?",
+      "coreQuestion": "What should I read first to understand gaussian splatting reconstruction in this corpus?",
       "representativeMethodology": "Embedding-neighborhood cluster summary",
       "subBranches": [
-        "medical",
-        "imaging",
-        "medical imaging",
-        "organ",
-        "learn"
+        "gaussian",
+        "splatting",
+        "gaussian splatting",
+        "reconstruction",
+        "rendering"
       ],
       "representativeRecordIds": [
-        "demo-med-2",
-        "demo-med-3",
-        "demo-med-1"
+        "eccv-4199",
+        "eccv-4911",
+        "eccv-5498",
+        "eccv-4381",
+        "eccv-5856"
       ],
       "firstReadRecordIds": [
-        "demo-med-2",
-        "demo-med-3",
-        "demo-med-1"
+        "eccv-4199",
+        "eccv-4911",
+        "eccv-5498"
       ],
       "representativeSentences": [
-        "We evaluate foundation models for abdominal CT organ segmentation across eight hospitals.",
-        "Parameter-efficient adaptation reaches specialist-level Dice on five organs.",
-        "We learn style priors that harmonize scans while preserving pathology."
+        "To bridge the domain gap between natural scene reconstruction and medical volumetric rendering, we introduce Anatomy-Guided Priming (AGP), which incorporates segmentation masks and transfer functions as structural and appearance priors, information that existing Gaussian splatting methods overlook.",
+        "The efficient spatial allocation of primitives serves as the foundation of 3D Gaussian Splatting, as it directly dictates the synergy between representation compactness, reconstruction speed, and rendering fidelity.",
+        "Gaussian Splatting (GS) has emerged as a dominating technique for image rendering and has quickly been adapted for the X-ray Computed Tomography (CT) reconstruction task."
       ],
       "areaCounts": [
         {
-          "label": "Medical Imaging",
-          "count": 3
+          "label": "3D Reconstruction, Gaussian Splatting & Neural Rendering",
+          "count": 225
+        },
+        {
+          "label": "Image Generation, Editing & Diffusion",
+          "count": 198
+        },
+        {
+          "label": "3D Reconstruction, Registration and Scene Modeling",
+          "count": 97
+        },
+        {
+          "label": "3D Graphics and Geometric Representations",
+          "count": 5
+        },
+        {
+          "label": "3D Reconstruction, Gaussian Splatting & Neural Rendering ⋅ 3D Graphics and Geometric Representations",
+          "count": 1
+        },
+        {
+          "label": "3D Reconstruction, Gaussian Splatting & Neural Rendering ⋅ Video Generation, Avatars & Dynamic Worlds",
+          "count": 1
         }
       ],
       "domainCounts": [
         {
           "label": "General",
+          "count": 531
+        }
+      ]
+    },
+    {
+      "id": "trend-3",
+      "name": "Imaging Computational Geometry",
+      "clusterLabel": "Imaging Computational Geometry",
+      "clusterId": "c3",
+      "size": 469,
+      "summary": "Volume denoising is a foundational problem in computational imaging, as many 3D imaging inverse problems face high levels of measurement noise.",
+      "keywords": [
+        "imaging",
+        "computational imaging",
+        "computational",
+        "geometry",
+        "medical"
+      ],
+      "coreQuestion": "What should I read first to understand imaging computational geometry in this corpus?",
+      "representativeMethodology": "Embedding-neighborhood cluster summary",
+      "subBranches": [
+        "imaging",
+        "computational imaging",
+        "computational",
+        "geometry",
+        "medical"
+      ],
+      "representativeRecordIds": [
+        "eccv-4610",
+        "eccv-5379",
+        "eccv-5524",
+        "eccv-4332",
+        "eccv-5620"
+      ],
+      "firstReadRecordIds": [
+        "eccv-4610",
+        "eccv-5379",
+        "eccv-5524"
+      ],
+      "representativeSentences": [
+        "Volume denoising is a foundational problem in computational imaging, as many 3D imaging inverse problems face high levels of measurement noise.",
+        "Furthermore, it achieves superior performance over existing DPO-based MRG methods, exhibiting robust generalizability across distinct baseline architectures and diverse medical imaging modalities.",
+        "In parallel, the indirect path is approximated by combining 3D Gaussian Splatting with a virtual-receiver geometry to fit and reproduce site-specific multipath interference patterns, achieving substantially lower computational cost than explicit full ray tracing."
+      ],
+      "areaCounts": [
+        {
+          "label": "Computational Imaging, Medical & Scientific Vision",
+          "count": 156
+        },
+        {
+          "label": "Geometry, Localization, Matching & Motion",
+          "count": 141
+        },
+        {
+          "label": "Vision Foundation Models: Interpretability and Reasoning",
+          "count": 85
+        },
+        {
+          "label": "Computational Imaging, Shape Recovery and Camera Geometry",
+          "count": 84
+        },
+        {
+          "label": "Geometry, Localization, Matching & Motion ⋅ 3D Reconstruction, Registration and Scene Modeling",
+          "count": 1
+        },
+        {
+          "label": "Vision-Language Models & Foundation Models ⋅ Geometry, Localization, Matching & Motion",
+          "count": 1
+        }
+      ],
+      "domainCounts": [
+        {
+          "label": "General",
+          "count": 469
+        }
+      ]
+    },
+    {
+      "id": "trend-4",
+      "name": "Recognition Detection Segmentation",
+      "clusterLabel": "Recognition Detection Segmentation",
+      "clusterId": "c4",
+      "size": 541,
+      "summary": "We train baseline models on EventKitchen to perform multiple event-based tasks, including action recognition, object detection, and stereo depth estimation.",
+      "keywords": [
+        "recognition",
+        "detection",
+        "segmentation",
+        "open-world",
+        "open-world recognition"
+      ],
+      "coreQuestion": "What should I read first to understand recognition detection segmentation in this corpus?",
+      "representativeMethodology": "Embedding-neighborhood cluster summary",
+      "subBranches": [
+        "recognition",
+        "detection",
+        "segmentation",
+        "open-world",
+        "open-world recognition"
+      ],
+      "representativeRecordIds": [
+        "eccv-4887",
+        "eccv-4796",
+        "eccv-5721",
+        "eccv-3682",
+        "eccv-4774"
+      ],
+      "firstReadRecordIds": [
+        "eccv-4887",
+        "eccv-4796",
+        "eccv-5721"
+      ],
+      "representativeSentences": [
+        "We train baseline models on EventKitchen to perform multiple event-based tasks, including action recognition, object detection, and stereo depth estimation.",
+        "While much progress has been made to solve 2D object detection, 3D object localization is much less explored and far from solved, especially for open-world categories.",
+        "Recent advances in self-supervised learning (SSL) enable scalable pretraining and transfers well to per-point tasks such as semantic and panoptic segmentation, but transfer to 3D detection remains weaker."
+      ],
+      "areaCounts": [
+        {
+          "label": "Embodied AI, Robotics & Autonomous Driving",
+          "count": 196
+        },
+        {
+          "label": "Open-World Recognition, Segmentation & Transfer",
+          "count": 176
+        },
+        {
+          "label": "Recognition, Tracking, Re-ID & Anomaly Detection",
+          "count": 163
+        },
+        {
+          "label": "3D Graphics and Geometric Representations",
           "count": 3
+        },
+        {
+          "label": "Open-World Recognition, Segmentation & Transfer ⋅ 3D Reconstruction, Registration and Scene Modeling",
+          "count": 1
+        },
+        {
+          "label": "3D Reconstruction, Registration and Scene Modeling ⋅ Embodied AI, Robotics & Autonomous Driving",
+          "count": 1
+        }
+      ],
+      "domainCounts": [
+        {
+          "label": "General",
+          "count": 541
+        }
+      ]
+    },
+    {
+      "id": "trend-5",
+      "name": "Learned Video Understanding",
+      "clusterLabel": "Learned Video Understanding",
+      "clusterId": "c5",
+      "size": 791,
+      "summary": "We argue that the core bottleneck lies in the absence of a learned policy to make decision, as a vision-language model cannot efficiently handle degradation-aware task ordering and tool composition.",
+      "keywords": [
+        "learned",
+        "video understanding",
+        "generation multimodal",
+        "multimodal learned",
+        "vision-language"
+      ],
+      "coreQuestion": "What should I read first to understand learned video understanding in this corpus?",
+      "representativeMethodology": "Embedding-neighborhood cluster summary",
+      "subBranches": [
+        "learned",
+        "video understanding",
+        "generation multimodal",
+        "multimodal learned",
+        "vision-language"
+      ],
+      "representativeRecordIds": [
+        "eccv-3462",
+        "eccv-5315",
+        "eccv-3767",
+        "eccv-5333",
+        "eccv-3400"
+      ],
+      "firstReadRecordIds": [
+        "eccv-3462",
+        "eccv-5315",
+        "eccv-3767"
+      ],
+      "representativeSentences": [
+        "We argue that the core bottleneck lies in the absence of a learned policy to make decision, as a vision-language model cannot efficiently handle degradation-aware task ordering and tool composition.",
+        "The performance of vision-language models (VLMs) in video understanding declines with increasing video duration, as video moments unrelated to the query confuse their language components.",
+        "We introduce ScenarioControl, the first vision-language control mechanism for learned driving scenario generation."
+      ],
+      "areaCounts": [
+        {
+          "label": "Video Understanding, Generation and Multimodal Learning",
+          "count": 235
+        },
+        {
+          "label": "Vision-Language Models & Foundation Models",
+          "count": 165
+        },
+        {
+          "label": "Low-Level Vision, Restoration & Generative Priors",
+          "count": 156
+        },
+        {
+          "label": "Federated, Continual & Efficient Learning",
+          "count": 136
+        },
+        {
+          "label": "Robustness, Privacy, Learning & Theory",
+          "count": 88
+        },
+        {
+          "label": "Image Generation, Editing & Diffusion ⋅ Low-Level Vision, Restoration & Generative Priors",
+          "count": 2
+        }
+      ],
+      "domainCounts": [
+        {
+          "label": "General",
+          "count": 791
         }
       ]
     }

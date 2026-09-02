@@ -9,7 +9,7 @@ export const PEOPLE_TOPICS_URL = "site/data/analysis/conference_people_topics.js
 export const REFERENCES_MANIFEST_URL = "site/data/references/manifest.json";
 export const REFERENCES_INSIGHTS_URL = "site/data/references/insights.json";
 export const PAGE_SIZE = 80;
-export const REPO_CDN_BASE = "https://cdn.jsdelivr.net/gh/KimYeongHyeon/Conference_Atlas_Template@main/";
+export const REPO_CDN_BASE = "https://cdn.jsdelivr.net/gh/KimYeongHyeon/ECCV_2026_Browser@main/";
 export const LOCAL_ASSET_PREFIX = window.location.pathname.includes("/docs/") ? "../" : "";
 export const SITE_ROOT_URL = new URL("../", import.meta.url).href;
 export function assetUrl(path) {

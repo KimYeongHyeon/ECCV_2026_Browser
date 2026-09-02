@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-02T13:45:51.261Z",
+  "generatedAt": "2026-09-02T15:03:02.172Z",
   "source": {
-    "recordCount": 2,
+    "recordCount": 0,
     "input": "pdf_and_jsonl"
   },
   "limits": {
@@ -10,33 +10,17 @@
     "minSharedKeysForOverlap": 2
   },
   "summary": {
-    "recordCount": 6,
-    "matchedRecords": 2,
-    "recordsWithReferences": 2,
-    "recordsWithOverlaps": 2,
-    "uniqueReferenceKeys": 4,
+    "recordCount": 2864,
+    "matchedRecords": 0,
+    "recordsWithReferences": 0,
+    "recordsWithOverlaps": 0,
+    "uniqueReferenceKeys": 0,
     "extractionErrors": 0
   },
-  "records": {
-    "demo-llm-1": {
-      "url": "site/data/references/records/demo-llm-1.json",
-      "referenceCount": 3,
-      "overlapCount": 1
-    },
-    "demo-llm-2": {
-      "url": "site/data/references/records/demo-llm-2.json",
-      "referenceCount": 3,
-      "overlapCount": 1
-    }
-  },
+  "records": {},
   "analysis": {
     "referenceCounts": {
-      "byArea": [
-        {
-          "label": "Efficiency",
-          "count": 6
-        }
-      ],
+      "byArea": [],
       "byDomain": []
     }
   },

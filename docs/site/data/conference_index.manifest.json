@@ -1,38 +1,77 @@
 {
-  "generatedAt": "2026-09-02T13:45:51.261Z",
-  "indexArtifactFingerprint": "sha256:dc7637b3a3d7384bf741298697cac87c89ef15a0694d88c3547d47584e9934c4",
-  "peopleTopicsArtifactFingerprint": "sha256:a7ce72f19224de0ca0dabeea377ff8edcb458f5ca7656a3fc9137d57f527d55b",
+  "generatedAt": "2026-09-02T15:03:02.172Z",
+  "indexArtifactFingerprint": "sha256:eca476be79fb60f5141ceb6c111d118596484eb672bc4a555cee3489e991cdb2",
+  "peopleTopicsArtifactFingerprint": "sha256:a183bff38bc8b5eab3b5a3b01ea80c6a8dc6de87eba252138ecb1a5cebf61020",
   "summary": {
-    "total": 6,
+    "total": 2864,
     "typeCounts": {
-      "paper": 6
+      "paper": 2864
     },
     "assetCounts": {
-      "pdf": 2,
+      "pdf": 0,
       "poster": 0,
       "slide": 0
     },
     "availabilityCounts": {
-      "downloaded": 2,
+      "downloaded": 0,
       "blocked": 0,
-      "metadata": 4,
+      "metadata": 2864,
       "unavailable": 0
     },
     "categories": [
-      "Efficiency",
-      "Medical Imaging"
+      "3D Graphics and Geometric Representations",
+      "3D Reconstruction, Gaussian Splatting & Neural Rendering",
+      "3D Reconstruction, Gaussian Splatting & Neural Rendering ⋅ 3D Graphics and Geometric Representations",
+      "3D Reconstruction, Gaussian Splatting & Neural Rendering ⋅ Video Generation, Avatars & Dynamic Worlds",
+      "3D Reconstruction, Registration and Scene Modeling",
+      "3D Reconstruction, Registration and Scene Modeling ⋅ Embodied AI, Robotics & Autonomous Driving",
+      "Computational Imaging, Medical & Scientific Vision",
+      "Computational Imaging, Shape Recovery and Camera Geometry",
+      "Computational Imaging, Shape Recovery and Camera Geometry ⋅ Low-Level Vision, Restoration & Generative Priors",
+      "Embodied AI, Robotics & Autonomous Driving",
+      "Federated, Continual & Efficient Learning",
+      "Geometry, Localization, Matching & Motion",
+      "Geometry, Localization, Matching & Motion ⋅ 3D Reconstruction, Registration and Scene Modeling",
+      "Image Generation, Editing & Diffusion",
+      "Image Generation, Editing & Diffusion ⋅ Low-Level Vision, Restoration & Generative Priors",
+      "Low-Level Vision, Restoration & Generative Priors",
+      "Model Security",
+      "Multimodal, Video & Document Understanding",
+      "Open-World Recognition, Segmentation & Transfer",
+      "Open-World Recognition, Segmentation & Transfer ⋅ 3D Reconstruction, Registration and Scene Modeling",
+      "Open-World Recognition, Segmentation & Transfer ⋅ Embodied AI, Robotics & Autonomous Driving",
+      "Recognition, Tracking, Re-ID & Anomaly Detection",
+      "Recognition, Tracking, Re-ID & Anomaly Detection ⋅ Federated, Continual & Efficient Learning",
+      "Robustness, Privacy, Learning & Theory",
+      "Robustness, Privacy, Learning & Theory ⋅ Federated, Continual & Efficient Learning",
+      "Robustness, Privacy, Learning & Theory ⋅ Image Generation, Editing & Diffusion",
+      "Video Generation, Avatars & Dynamic Worlds",
+      "Video Understanding, Generation and Multimodal Learning",
+      "Video Understanding, Generation and Multimodal Learning ⋅ Image Generation, Editing & Diffusion",
+      "Video Understanding, Generation and Multimodal Learning ⋅ Low-Level Vision, Restoration & Generative Priors",
+      "Video Understanding, Generation and Multimodal Learning ⋅ Multimodal, Video & Document Understanding",
+      "Vision Foundation Models: Interpretability and Reasoning",
+      "Vision Foundation Models: Interpretability and Reasoning ⋅ Image Generation, Editing & Diffusion",
+      "Vision-Language Models & Foundation Models",
+      "Vision-Language Models & Foundation Models ⋅ Geometry, Localization, Matching & Motion",
+      "Vision-Language Models & Foundation Models ⋅ Vision Foundation Models: Interpretability and Reasoning"
     ],
     "groups": {
       "paper": [
-        "Main Conference"
+        "Poster Session 1",
+        "Poster Session 2",
+        "Poster Session 3",
+        "Poster Session 4",
+        "Poster Session 5",
+        "Poster Session 6"
       ],
       "poster": [],
       "workshop": []
     },
     "embedding": {
       "status": "fresh",
-      "recordCount": 6,
-      "mapRecordCount": 6,
+      "recordCount": 2864,
+      "mapRecordCount": 2864,
       "staleReasons": []
     }
   },
