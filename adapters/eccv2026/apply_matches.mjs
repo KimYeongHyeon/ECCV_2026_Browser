@@ -29,6 +29,7 @@ async function main() {
     return {
       ...record,
       abstract: match.abstract || record.abstract,
+      pdfUrl: match.arxivId ? `https://arxiv.org/pdf/${match.arxivId}` : record.pdfUrl,
       upstream: {
         ...record.upstream,
         arxiv: {
