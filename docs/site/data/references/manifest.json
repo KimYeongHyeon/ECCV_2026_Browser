@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-09-02T13:45:51.261Z",
+  "source": {
+    "recordCount": 2,
+    "input": "pdf_and_jsonl"
+  },
+  "limits": {
+    "maxReferencesPerRecord": 400,
+    "maxCommunities": 12,
+    "minSharedKeysForOverlap": 2
+  },
+  "summary": {
+    "recordCount": 6,
+    "matchedRecords": 2,
+    "recordsWithReferences": 2,
+    "recordsWithOverlaps": 2,
+    "uniqueReferenceKeys": 4,
+    "extractionErrors": 0
+  },
+  "records": {
+    "demo-llm-1": {
+      "url": "site/data/references/records/demo-llm-1.json",
+      "referenceCount": 3,
+      "overlapCount": 1
+    },
+    "demo-llm-2": {
+      "url": "site/data/references/records/demo-llm-2.json",
+      "referenceCount": 3,
+      "overlapCount": 1
+    }
+  },
+  "analysis": {
+    "referenceCounts": {
+      "byArea": [
+        {
+          "label": "Efficiency",
+          "count": 6
+        }
+      ],
+      "byDomain": []
+    }
+  },
+  "errors": []
+}

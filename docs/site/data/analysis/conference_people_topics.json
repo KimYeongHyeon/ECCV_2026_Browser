@@ -1,0 +1,502 @@
+{
+  "schemaVersion": "conference-atlas-people-topics/v1",
+  "source": {
+    "conceptArtifactFingerprint": "sha256:96f2eb08171c90a767131ef0a1bf68a6a6c4c3fc1a2a52d6c9af35b97c6b1d6f",
+    "conceptRecordCount": 6,
+    "corpusYear": 2026,
+    "indexVersion": "2026-09-02T13:45:51.261Z",
+    "indexArtifactFingerprint": "sha256:dc7637b3a3d7384bf741298697cac87c89ef15a0694d88c3547d47584e9934c4"
+  },
+  "scopes": {
+    "all": {
+      "summary": {
+        "uniqueWorks": 6,
+        "authorCount": 9,
+        "groupCount": 0,
+        "emailIdentityCount": 0
+      },
+      "identityResolution": {
+        "method": "email-then-normalized-name-with-shared-coauthor-context",
+        "emailAddressesPublished": false
+      },
+      "authors": [
+        {
+          "identityId": "4:0",
+          "name": "Alice Chen",
+          "aliases": [
+            "Alice Chen"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "serving",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-1"
+          ]
+        },
+        {
+          "identityId": "4:1",
+          "name": "Byeongho Park",
+          "aliases": [
+            "Byeongho Park"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "serving",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-1"
+          ]
+        },
+        {
+          "identityId": "3:0",
+          "name": "Carla Diaz",
+          "aliases": [
+            "Carla Diaz"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "quantized",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-2"
+          ]
+        },
+        {
+          "identityId": "3:1",
+          "name": "Doe Kim",
+          "aliases": [
+            "Doe Kim"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "quantized",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-2"
+          ]
+        },
+        {
+          "identityId": "5:0",
+          "name": "Eunji Song",
+          "aliases": [
+            "Eunji Song"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "draft",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-3"
+          ]
+        },
+        {
+          "identityId": "0:0",
+          "name": "Hana Lee",
+          "aliases": [
+            "Hana Lee"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "mri",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-med-2"
+          ]
+        },
+        {
+          "identityId": "0:1",
+          "name": "Junho Park",
+          "aliases": [
+            "Junho Park"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "mri",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-med-2"
+          ]
+        },
+        {
+          "identityId": "2:0",
+          "name": "Minjun Seo",
+          "aliases": [
+            "Minjun Seo"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "organ",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-med-1"
+          ]
+        },
+        {
+          "identityId": "1:0",
+          "name": "Sora Kim",
+          "aliases": [
+            "Sora Kim"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "federated",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-med-3"
+          ]
+        }
+      ],
+      "coauthorLinks": [
+        {
+          "source": "0:0",
+          "target": "0:1",
+          "value": 1
+        },
+        {
+          "source": "3:0",
+          "target": "3:1",
+          "value": 1
+        },
+        {
+          "source": "4:0",
+          "target": "4:1",
+          "value": 1
+        }
+      ],
+      "groups": [],
+      "topicTrends": {
+        "claimScope": "single-year-corpus-prevalence",
+        "workCount": 6,
+        "topicBearingWorkCount": 6,
+        "note": "Conference corpus is a single-year corpus. Shares use 6 unique works; counts describe prevalence, not temporal growth.",
+        "topics": [
+          {
+            "label": "draft",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "federated",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "mri",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "organ",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "quantized",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "serving",
+            "workCount": 1,
+            "workShare": 0.166667
+          }
+        ]
+      }
+    },
+    "main": {
+      "summary": {
+        "uniqueWorks": 6,
+        "authorCount": 9,
+        "groupCount": 0,
+        "emailIdentityCount": 0
+      },
+      "identityResolution": {
+        "method": "email-then-normalized-name-with-shared-coauthor-context",
+        "emailAddressesPublished": false
+      },
+      "authors": [
+        {
+          "identityId": "4:0",
+          "name": "Alice Chen",
+          "aliases": [
+            "Alice Chen"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "serving",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-1"
+          ]
+        },
+        {
+          "identityId": "4:1",
+          "name": "Byeongho Park",
+          "aliases": [
+            "Byeongho Park"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "serving",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-1"
+          ]
+        },
+        {
+          "identityId": "3:0",
+          "name": "Carla Diaz",
+          "aliases": [
+            "Carla Diaz"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "quantized",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-2"
+          ]
+        },
+        {
+          "identityId": "3:1",
+          "name": "Doe Kim",
+          "aliases": [
+            "Doe Kim"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "quantized",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-2"
+          ]
+        },
+        {
+          "identityId": "5:0",
+          "name": "Eunji Song",
+          "aliases": [
+            "Eunji Song"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "draft",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-llm-3"
+          ]
+        },
+        {
+          "identityId": "0:0",
+          "name": "Hana Lee",
+          "aliases": [
+            "Hana Lee"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "mri",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-med-2"
+          ]
+        },
+        {
+          "identityId": "0:1",
+          "name": "Junho Park",
+          "aliases": [
+            "Junho Park"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "mri",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-med-2"
+          ]
+        },
+        {
+          "identityId": "2:0",
+          "name": "Minjun Seo",
+          "aliases": [
+            "Minjun Seo"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "organ",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-med-1"
+          ]
+        },
+        {
+          "identityId": "1:0",
+          "name": "Sora Kim",
+          "aliases": [
+            "Sora Kim"
+          ],
+          "identityEvidence": "single-record-name",
+          "paperCount": 1,
+          "topics": [
+            {
+              "label": "federated",
+              "count": 1
+            }
+          ],
+          "recordIds": [
+            "demo-med-3"
+          ]
+        }
+      ],
+      "coauthorLinks": [
+        {
+          "source": "0:0",
+          "target": "0:1",
+          "value": 1
+        },
+        {
+          "source": "3:0",
+          "target": "3:1",
+          "value": 1
+        },
+        {
+          "source": "4:0",
+          "target": "4:1",
+          "value": 1
+        }
+      ],
+      "groups": [],
+      "topicTrends": {
+        "claimScope": "single-year-corpus-prevalence",
+        "workCount": 6,
+        "topicBearingWorkCount": 6,
+        "note": "Conference corpus is a single-year corpus. Shares use 6 unique works; counts describe prevalence, not temporal growth.",
+        "topics": [
+          {
+            "label": "draft",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "federated",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "mri",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "organ",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "quantized",
+            "workCount": 1,
+            "workShare": 0.166667
+          },
+          {
+            "label": "serving",
+            "workCount": 1,
+            "workShare": 0.166667
+          }
+        ]
+      }
+    },
+    "workshop": {
+      "summary": {
+        "uniqueWorks": 0,
+        "authorCount": 0,
+        "groupCount": 0,
+        "emailIdentityCount": 0
+      },
+      "identityResolution": {
+        "method": "email-then-normalized-name-with-shared-coauthor-context",
+        "emailAddressesPublished": false
+      },
+      "authors": [],
+      "coauthorLinks": [],
+      "groups": [],
+      "topicTrends": {
+        "claimScope": "single-year-corpus-prevalence",
+        "workCount": 0,
+        "topicBearingWorkCount": 0,
+        "note": "Conference corpus is a single-year corpus. Shares use 0 unique works; counts describe prevalence, not temporal growth.",
+        "topics": []
+      }
+    }
+  },
+  "fingerprints": {
+    "artifact": "sha256:ddd570086a958b64bc88726fa29466219db9d1233699ffa69d183707c3b3025d",
+    "conceptArtifact": "sha256:96f2eb08171c90a767131ef0a1bf68a6a6c4c3fc1a2a52d6c9af35b97c6b1d6f"
+  }
+}

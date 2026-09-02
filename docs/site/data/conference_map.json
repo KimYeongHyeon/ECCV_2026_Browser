@@ -1,0 +1,214 @@
+{
+  "generatedAt": "2026-09-02T13:45:51.261Z",
+  "embeddingSource": {
+    "method": "tfidf-deterministic",
+    "fingerprint": "sha256:dc7637b3a3d7384bf741298697cac87c89ef15a0694d88c3547d47584e9934c4",
+    "note": "Zero-dependency first pass. Import SPECTER2 vectors via scripts/import_search_embeddings.mjs for stronger query semantics."
+  },
+  "model": {
+    "id": "tfidf-local",
+    "kind": "tfidf",
+    "neighborCount": 12
+  },
+  "projection": {
+    "method": "pca-power-iteration",
+    "seed": 42
+  },
+  "records": [
+    {
+      "id": "demo-llm-1",
+      "x": -0.8881,
+      "y": 0.3865,
+      "nearestNeighbors": [
+        {
+          "id": "demo-llm-2",
+          "score": 0.084
+        },
+        {
+          "id": "demo-llm-3",
+          "score": 0.0341
+        },
+        {
+          "id": "demo-med-2",
+          "score": 0.0228
+        }
+      ]
+    },
+    {
+      "id": "demo-llm-2",
+      "x": -1,
+      "y": 0.4028,
+      "nearestNeighbors": [
+        {
+          "id": "demo-llm-1",
+          "score": 0.084
+        },
+        {
+          "id": "demo-llm-3",
+          "score": 0.0258
+        }
+      ]
+    },
+    {
+      "id": "demo-llm-3",
+      "x": -0.5597,
+      "y": -1,
+      "nearestNeighbors": [
+        {
+          "id": "demo-llm-1",
+          "score": 0.0341
+        },
+        {
+          "id": "demo-llm-2",
+          "score": 0.0258
+        }
+      ]
+    },
+    {
+      "id": "demo-med-1",
+      "x": 0.7279,
+      "y": -0.0508,
+      "nearestNeighbors": [
+        {
+          "id": "demo-med-2",
+          "score": 0.0652
+        },
+        {
+          "id": "demo-med-3",
+          "score": 0.0571
+        }
+      ]
+    },
+    {
+      "id": "demo-med-2",
+      "x": 0.8331,
+      "y": 0.189,
+      "nearestNeighbors": [
+        {
+          "id": "demo-med-3",
+          "score": 0.0799
+        },
+        {
+          "id": "demo-med-1",
+          "score": 0.0652
+        },
+        {
+          "id": "demo-llm-1",
+          "score": 0.0228
+        }
+      ]
+    },
+    {
+      "id": "demo-med-3",
+      "x": 0.8868,
+      "y": 0.0726,
+      "nearestNeighbors": [
+        {
+          "id": "demo-med-2",
+          "score": 0.0799
+        },
+        {
+          "id": "demo-med-1",
+          "score": 0.0571
+        }
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "id": "c1",
+      "label": "Efficiency Language Models",
+      "topTerms": [
+        "efficiency",
+        "language",
+        "language models",
+        "memory",
+        "draft"
+      ],
+      "size": 3,
+      "method": "kmeans-tfidf"
+    },
+    {
+      "id": "c2",
+      "label": "Medical Imaging Organ",
+      "topTerms": [
+        "medical",
+        "imaging",
+        "medical imaging",
+        "organ",
+        "learn"
+      ],
+      "size": 3,
+      "method": "kmeans-tfidf"
+    }
+  ],
+  "embeddingClusters": [
+    {
+      "id": "c1",
+      "label": "Efficiency Language Models",
+      "topTerms": [
+        "efficiency",
+        "language",
+        "language models",
+        "memory",
+        "draft"
+      ],
+      "size": 3,
+      "method": "kmeans-tfidf"
+    },
+    {
+      "id": "c2",
+      "label": "Medical Imaging Organ",
+      "topTerms": [
+        "medical",
+        "imaging",
+        "medical imaging",
+        "organ",
+        "learn"
+      ],
+      "size": 3,
+      "method": "kmeans-tfidf"
+    }
+  ],
+  "embeddingClusterLevels": [
+    {
+      "k": 2,
+      "assignments": [
+        "c1",
+        "c1",
+        "c1",
+        "c2",
+        "c2",
+        "c2"
+      ],
+      "clusters": [
+        {
+          "id": "c1",
+          "label": "Efficiency Language Models",
+          "topTerms": [
+            "efficiency",
+            "language",
+            "language models",
+            "memory",
+            "draft"
+          ],
+          "size": 3,
+          "method": "kmeans-tfidf"
+        },
+        {
+          "id": "c2",
+          "label": "Medical Imaging Organ",
+          "topTerms": [
+            "medical",
+            "imaging",
+            "medical imaging",
+            "organ",
+            "learn"
+          ],
+          "size": 3,
+          "method": "kmeans-tfidf"
+        }
+      ]
+    }
+  ]
+}

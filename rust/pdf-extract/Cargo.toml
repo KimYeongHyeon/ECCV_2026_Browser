@@ -1,0 +1,16 @@
+[package]
+name = "pdf-extract"
+version = "0.1.0"
+edition = "2021"
+description = "WebAssembly hot path for PDF text extraction (flattened port of scripts/lib/pdf.mjs)"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Pure Rust inflate (zlib + raw deflate); no C toolchain required.
+miniz_oxide = "0.8"
+
+[profile.release]
+opt-level = 3

@@ -1,0 +1,111 @@
+{
+  "generatedAt": "2026-09-02T13:45:51.261Z",
+  "source": {
+    "recordCount": 6,
+    "method": "cluster-summary/v1"
+  },
+  "trends": [
+    {
+      "id": "trend-1",
+      "name": "Efficiency Language Models",
+      "clusterLabel": "Efficiency Language Models",
+      "clusterId": "c1",
+      "size": 3,
+      "summary": "We fine-tune language models with 4-bit quantized LoRA adapters under a strict memory budget.",
+      "keywords": [
+        "efficiency",
+        "language",
+        "language models",
+        "memory",
+        "draft"
+      ],
+      "coreQuestion": "What should I read first to understand efficiency language models in this corpus?",
+      "representativeMethodology": "Embedding-neighborhood cluster summary",
+      "subBranches": [
+        "efficiency",
+        "language",
+        "language models",
+        "memory",
+        "draft"
+      ],
+      "representativeRecordIds": [
+        "demo-llm-1",
+        "demo-llm-2",
+        "demo-llm-3"
+      ],
+      "firstReadRecordIds": [
+        "demo-llm-1",
+        "demo-llm-2",
+        "demo-llm-3"
+      ],
+      "representativeSentences": [
+        "We fine-tune language models with 4-bit quantized LoRA adapters under a strict memory budget.",
+        "We study efficient serving of long-context language models with sparse attention.",
+        "A chunked KV-cache scheduler keeps memory bounded while preserving answer quality on long-document benchmarks."
+      ],
+      "areaCounts": [
+        {
+          "label": "Efficiency",
+          "count": 3
+        }
+      ],
+      "domainCounts": [
+        {
+          "label": "General",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "trend-2",
+      "name": "Medical Imaging Organ",
+      "clusterLabel": "Medical Imaging Organ",
+      "clusterId": "c2",
+      "size": 3,
+      "summary": "We evaluate foundation models for abdominal CT organ segmentation across eight hospitals.",
+      "keywords": [
+        "medical",
+        "imaging",
+        "medical imaging",
+        "organ",
+        "learn"
+      ],
+      "coreQuestion": "What should I read first to understand medical imaging organ in this corpus?",
+      "representativeMethodology": "Embedding-neighborhood cluster summary",
+      "subBranches": [
+        "medical",
+        "imaging",
+        "medical imaging",
+        "organ",
+        "learn"
+      ],
+      "representativeRecordIds": [
+        "demo-med-2",
+        "demo-med-3",
+        "demo-med-1"
+      ],
+      "firstReadRecordIds": [
+        "demo-med-2",
+        "demo-med-3",
+        "demo-med-1"
+      ],
+      "representativeSentences": [
+        "We evaluate foundation models for abdominal CT organ segmentation across eight hospitals.",
+        "Parameter-efficient adaptation reaches specialist-level Dice on five organs.",
+        "We learn style priors that harmonize scans while preserving pathology."
+      ],
+      "areaCounts": [
+        {
+          "label": "Medical Imaging",
+          "count": 3
+        }
+      ],
+      "domainCounts": [
+        {
+          "label": "General",
+          "count": 3
+        }
+      ]
+    }
+  ]
+}

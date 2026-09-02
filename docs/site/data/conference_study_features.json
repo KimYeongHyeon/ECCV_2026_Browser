@@ -1,0 +1,155 @@
+{
+  "generatedAt": "2026-09-02T13:45:51.261Z",
+  "source": {
+    "recordCount": 6,
+    "method": "study-heuristics/v1"
+  },
+  "records": {
+    "demo-llm-1": {
+      "studyTrail": [
+        {
+          "recordId": "demo-llm-2",
+          "stage": "core",
+          "reason": "Most connected record in its semantic cluster."
+        },
+        {
+          "recordId": "demo-med-2",
+          "stage": "broader",
+          "reason": "Nearest record from a different cluster."
+        }
+      ],
+      "compareCandidates": [
+        {
+          "recordId": "demo-llm-2"
+        },
+        {
+          "recordId": "demo-llm-3"
+        },
+        {
+          "recordId": "demo-med-2"
+        }
+      ]
+    },
+    "demo-llm-2": {
+      "studyTrail": [
+        {
+          "recordId": "demo-llm-1",
+          "stage": "core",
+          "reason": "Most connected record in its semantic cluster."
+        }
+      ],
+      "compareCandidates": [
+        {
+          "recordId": "demo-llm-1"
+        },
+        {
+          "recordId": "demo-llm-3"
+        }
+      ]
+    },
+    "demo-llm-3": {
+      "studyTrail": [
+        {
+          "recordId": "demo-llm-2",
+          "stage": "core",
+          "reason": "Most connected record in its semantic cluster."
+        }
+      ],
+      "compareCandidates": [
+        {
+          "recordId": "demo-llm-1"
+        },
+        {
+          "recordId": "demo-llm-2"
+        }
+      ]
+    },
+    "demo-med-1": {
+      "studyTrail": [
+        {
+          "recordId": "demo-med-3",
+          "stage": "core",
+          "reason": "Most connected record in its semantic cluster."
+        }
+      ],
+      "compareCandidates": [
+        {
+          "recordId": "demo-med-2"
+        },
+        {
+          "recordId": "demo-med-3"
+        }
+      ]
+    },
+    "demo-med-2": {
+      "studyTrail": [
+        {
+          "recordId": "demo-med-3",
+          "stage": "core",
+          "reason": "Most connected record in its semantic cluster."
+        },
+        {
+          "recordId": "demo-med-1",
+          "stage": "intro",
+          "reason": "Survey or review-style record in the same cluster."
+        },
+        {
+          "recordId": "demo-llm-1",
+          "stage": "broader",
+          "reason": "Nearest record from a different cluster."
+        }
+      ],
+      "compareCandidates": [
+        {
+          "recordId": "demo-med-3"
+        },
+        {
+          "recordId": "demo-med-1"
+        },
+        {
+          "recordId": "demo-llm-1"
+        }
+      ]
+    },
+    "demo-med-3": {
+      "studyTrail": [
+        {
+          "recordId": "demo-med-1",
+          "stage": "core",
+          "reason": "Most connected record in its semantic cluster."
+        }
+      ],
+      "compareCandidates": [
+        {
+          "recordId": "demo-med-2"
+        },
+        {
+          "recordId": "demo-med-1"
+        }
+      ]
+    }
+  },
+  "topics": {
+    "c1": {
+      "dominantArea": "Efficiency",
+      "dominantDomain": "General",
+      "nearbyTrendId": "trend-1",
+      "representativeRecordIds": [
+        "demo-llm-2",
+        "demo-llm-1",
+        "demo-llm-3"
+      ]
+    },
+    "c2": {
+      "dominantArea": "Medical Imaging",
+      "dominantDomain": "General",
+      "nearbyTrendId": "trend-2",
+      "representativeRecordIds": [
+        "demo-med-3",
+        "demo-med-1",
+        "demo-med-2"
+      ]
+    }
+  },
+  "outliers": []
+}

@@ -1,0 +1,403 @@
+{
+  "generatedAt": "2026-09-02T13:45:51.261Z",
+  "records": [
+    {
+      "id": "demo-llm-1",
+      "type": "paper",
+      "title": "Sparse Attention Serving for Long-Context Language Models",
+      "abstract": "We study efficient serving of long-context language models with sparse attention. A chunked KV-cache scheduler keeps memory bounded while preserving answer quality on long-document benchmarks. Serving throughput improves 2.1x against dense baselines.",
+      "authors": "Alice Chen, Byeongho Park",
+      "authorAffiliations": [],
+      "searchAliases": [
+        "Accepted"
+      ],
+      "group": "Main Conference",
+      "category": "Efficiency",
+      "categoryTags": [
+        "Efficiency"
+      ],
+      "areaTags": [
+        "Efficiency"
+      ],
+      "domainTags": [],
+      "clusterId": null,
+      "clusterLabel": "",
+      "embeddingClusterId": "c1",
+      "embeddingClusterLabel": "Efficiency Language Models",
+      "embeddingClusterKeywords": [
+        "efficiency",
+        "language",
+        "language models"
+      ],
+      "mapAvailable": true,
+      "status": "downloaded",
+      "sourceType": "csv_input",
+      "sourceUrl": "https://example.org/llm1",
+      "sourceCheckedAt": "2026-01-01T00:00:00Z",
+      "failureReason": "",
+      "availabilityStatus": "downloaded",
+      "availabilityLabel": "Downloaded",
+      "pageUrl": "https://example.org/llm1",
+      "doi": "",
+      "doiUrl": "",
+      "openreviewUrl": "",
+      "projectPageUrl": "",
+      "pdfUrl": "",
+      "localPdfPath": "pdfs/demo-llm-1.pdf",
+      "localPosterPath": "",
+      "localSlidePath": "",
+      "localSupplementalPaths": [],
+      "bestAsset": "pdfs/demo-llm-1.pdf",
+      "bestAssetKind": "pdf",
+      "hasPdf": true,
+      "hasPoster": false,
+      "hasSlide": false,
+      "decision": "Poster",
+      "presentationType": "",
+      "presentationLabels": [],
+      "session": "",
+      "roomName": "",
+      "startTime": "Hall A",
+      "endTime": "",
+      "upstream": {},
+      "localPdfFile": "demo-llm-1.pdf",
+      "localPdfHash": "2d841fda6a7ae0b3b50833ab4b19a26fbf5a510ebb9da624bc0fc41b3afabf9e"
+    },
+    {
+      "id": "demo-llm-2",
+      "type": "paper",
+      "title": "Quantized LoRA Fine-Tuning Under a Fixed Memory Budget",
+      "abstract": "We fine-tune language models with 4-bit quantized LoRA adapters under a strict memory budget. A budget-aware rank scheduler trades adapter rank against quantization error. Quality matches full fine-tuning on three instruction datasets.",
+      "authors": "Carla Diaz, Doe Kim",
+      "authorAffiliations": [],
+      "searchAliases": [
+        "Accepted"
+      ],
+      "group": "Main Conference",
+      "category": "Efficiency",
+      "categoryTags": [
+        "Efficiency"
+      ],
+      "areaTags": [
+        "Efficiency"
+      ],
+      "domainTags": [],
+      "clusterId": null,
+      "clusterLabel": "",
+      "embeddingClusterId": "c1",
+      "embeddingClusterLabel": "Efficiency Language Models",
+      "embeddingClusterKeywords": [
+        "efficiency",
+        "language",
+        "language models"
+      ],
+      "mapAvailable": true,
+      "status": "downloaded",
+      "sourceType": "csv_input",
+      "sourceUrl": "https://example.org/llm2",
+      "sourceCheckedAt": "2026-01-01T00:00:00Z",
+      "failureReason": "",
+      "availabilityStatus": "downloaded",
+      "availabilityLabel": "Downloaded",
+      "pageUrl": "https://example.org/llm2",
+      "doi": "",
+      "doiUrl": "",
+      "openreviewUrl": "",
+      "projectPageUrl": "",
+      "pdfUrl": "",
+      "localPdfPath": "pdfs/demo-llm-2.pdf",
+      "localPosterPath": "",
+      "localSlidePath": "",
+      "localSupplementalPaths": [],
+      "bestAsset": "pdfs/demo-llm-2.pdf",
+      "bestAssetKind": "pdf",
+      "hasPdf": true,
+      "hasPoster": false,
+      "hasSlide": false,
+      "decision": "Oral",
+      "presentationType": "",
+      "presentationLabels": [],
+      "session": "",
+      "roomName": "",
+      "startTime": "Hall A",
+      "endTime": "",
+      "upstream": {},
+      "localPdfFile": "demo-llm-2.pdf",
+      "localPdfHash": "0faf9dfa7e0cc233515333df43201f8a985051c411d800cb4bb49e05cdbd2abc"
+    },
+    {
+      "id": "demo-llm-3",
+      "type": "paper",
+      "title": "Speculative Decoding with Draft Models for On-Device Inference",
+      "abstract": "Speculative decoding accelerates on-device inference by verifying draft tokens in parallel. We characterize when small draft models preserve output equivalence. Latency drops 1.8x on mobile hardware without quality loss.",
+      "authors": "Eunji Song",
+      "authorAffiliations": [],
+      "searchAliases": [
+        "Accepted"
+      ],
+      "group": "Main Conference",
+      "category": "Efficiency",
+      "categoryTags": [
+        "Efficiency"
+      ],
+      "areaTags": [
+        "Efficiency"
+      ],
+      "domainTags": [],
+      "clusterId": null,
+      "clusterLabel": "",
+      "embeddingClusterId": "c1",
+      "embeddingClusterLabel": "Efficiency Language Models",
+      "embeddingClusterKeywords": [
+        "efficiency",
+        "language",
+        "language models"
+      ],
+      "mapAvailable": true,
+      "status": "metadata_only",
+      "sourceType": "csv_input",
+      "sourceUrl": "https://example.org/llm3",
+      "sourceCheckedAt": "2026-01-01T00:00:00Z",
+      "failureReason": "",
+      "availabilityStatus": "metadata",
+      "availabilityLabel": "Metadata only",
+      "pageUrl": "https://example.org/llm3",
+      "doi": "",
+      "doiUrl": "",
+      "openreviewUrl": "",
+      "projectPageUrl": "",
+      "pdfUrl": "",
+      "localPdfPath": "",
+      "localPosterPath": "",
+      "localSlidePath": "",
+      "localSupplementalPaths": [],
+      "bestAsset": "",
+      "bestAssetKind": "",
+      "hasPdf": false,
+      "hasPoster": false,
+      "hasSlide": false,
+      "decision": "Poster",
+      "presentationType": "",
+      "presentationLabels": [],
+      "session": "",
+      "roomName": "",
+      "startTime": "Hall A",
+      "endTime": "",
+      "upstream": {}
+    },
+    {
+      "id": "demo-med-1",
+      "type": "paper",
+      "title": "Foundation Models for Abdominal CT Organ Segmentation",
+      "abstract": "We evaluate foundation models for abdominal CT organ segmentation across eight hospitals. Parameter-efficient adaptation reaches specialist-level Dice on five organs. Domain shift between vendors remains the main failure mode.",
+      "authors": "Minjun Seo",
+      "authorAffiliations": [],
+      "searchAliases": [
+        "Accepted"
+      ],
+      "group": "Main Conference",
+      "category": "Medical Imaging",
+      "categoryTags": [
+        "Medical Imaging"
+      ],
+      "areaTags": [
+        "Medical Imaging"
+      ],
+      "domainTags": [],
+      "clusterId": null,
+      "clusterLabel": "",
+      "embeddingClusterId": "c2",
+      "embeddingClusterLabel": "Medical Imaging Organ",
+      "embeddingClusterKeywords": [
+        "medical",
+        "imaging",
+        "medical imaging"
+      ],
+      "mapAvailable": true,
+      "status": "metadata_only",
+      "sourceType": "csv_input",
+      "sourceUrl": "https://example.org/med1",
+      "sourceCheckedAt": "2026-01-01T00:00:00Z",
+      "failureReason": "",
+      "availabilityStatus": "metadata",
+      "availabilityLabel": "Metadata only",
+      "pageUrl": "https://example.org/med1",
+      "doi": "",
+      "doiUrl": "",
+      "openreviewUrl": "",
+      "projectPageUrl": "",
+      "pdfUrl": "",
+      "localPdfPath": "",
+      "localPosterPath": "",
+      "localSlidePath": "",
+      "localSupplementalPaths": [],
+      "bestAsset": "",
+      "bestAssetKind": "",
+      "hasPdf": false,
+      "hasPoster": false,
+      "hasSlide": false,
+      "decision": "Oral",
+      "presentationType": "",
+      "presentationLabels": [],
+      "session": "",
+      "roomName": "",
+      "startTime": "Hall B",
+      "endTime": "",
+      "upstream": {}
+    },
+    {
+      "id": "demo-med-2",
+      "type": "paper",
+      "title": "Cross-Vendor MRI Harmonization with Style Priors",
+      "abstract": "MRI scans vary across vendors and sites, which harms downstream models. We learn style priors that harmonize scans while preserving pathology. Harmonization improves lesion classification accuracy by 6 points.",
+      "authors": "Hana Lee, Junho Park",
+      "authorAffiliations": [],
+      "searchAliases": [
+        "Accepted"
+      ],
+      "group": "Main Conference",
+      "category": "Medical Imaging",
+      "categoryTags": [
+        "Medical Imaging"
+      ],
+      "areaTags": [
+        "Medical Imaging"
+      ],
+      "domainTags": [],
+      "clusterId": null,
+      "clusterLabel": "",
+      "embeddingClusterId": "c2",
+      "embeddingClusterLabel": "Medical Imaging Organ",
+      "embeddingClusterKeywords": [
+        "medical",
+        "imaging",
+        "medical imaging"
+      ],
+      "mapAvailable": true,
+      "status": "metadata_only",
+      "sourceType": "csv_input",
+      "sourceUrl": "https://example.org/med2",
+      "sourceCheckedAt": "2026-01-01T00:00:00Z",
+      "failureReason": "",
+      "availabilityStatus": "metadata",
+      "availabilityLabel": "Metadata only",
+      "pageUrl": "https://example.org/med2",
+      "doi": "",
+      "doiUrl": "",
+      "openreviewUrl": "",
+      "projectPageUrl": "",
+      "pdfUrl": "",
+      "localPdfPath": "",
+      "localPosterPath": "",
+      "localSlidePath": "",
+      "localSupplementalPaths": [],
+      "bestAsset": "",
+      "bestAssetKind": "",
+      "hasPdf": false,
+      "hasPoster": false,
+      "hasSlide": false,
+      "decision": "Poster",
+      "presentationType": "",
+      "presentationLabels": [],
+      "session": "",
+      "roomName": "",
+      "startTime": "Hall B",
+      "endTime": "",
+      "upstream": {}
+    },
+    {
+      "id": "demo-med-3",
+      "type": "paper",
+      "title": "Federated Learning for Multi-Institution Radiology Reports",
+      "abstract": "We train report-generation models across institutions without sharing patient data. A federated aggregator with anatomy-aware weighting reduces site bias. Radiologists prefer generated reports in 61 percent of blind comparisons.",
+      "authors": "Sora Kim",
+      "authorAffiliations": [],
+      "searchAliases": [
+        "Accepted"
+      ],
+      "group": "Main Conference",
+      "category": "Medical Imaging",
+      "categoryTags": [
+        "Medical Imaging"
+      ],
+      "areaTags": [
+        "Medical Imaging"
+      ],
+      "domainTags": [],
+      "clusterId": null,
+      "clusterLabel": "",
+      "embeddingClusterId": "c2",
+      "embeddingClusterLabel": "Medical Imaging Organ",
+      "embeddingClusterKeywords": [
+        "medical",
+        "imaging",
+        "medical imaging"
+      ],
+      "mapAvailable": true,
+      "status": "metadata_only",
+      "sourceType": "csv_input",
+      "sourceUrl": "https://example.org/med3",
+      "sourceCheckedAt": "2026-01-01T00:00:00Z",
+      "failureReason": "",
+      "availabilityStatus": "metadata",
+      "availabilityLabel": "Metadata only",
+      "pageUrl": "https://example.org/med3",
+      "doi": "",
+      "doiUrl": "",
+      "openreviewUrl": "",
+      "projectPageUrl": "",
+      "pdfUrl": "",
+      "localPdfPath": "",
+      "localPosterPath": "",
+      "localSlidePath": "",
+      "localSupplementalPaths": [],
+      "bestAsset": "",
+      "bestAssetKind": "",
+      "hasPdf": false,
+      "hasPoster": false,
+      "hasSlide": false,
+      "decision": "Poster",
+      "presentationType": "",
+      "presentationLabels": [],
+      "session": "",
+      "roomName": "",
+      "startTime": "Hall B",
+      "endTime": "",
+      "upstream": {}
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "typeCounts": {
+      "paper": 6
+    },
+    "assetCounts": {
+      "pdf": 2,
+      "poster": 0,
+      "slide": 0
+    },
+    "availabilityCounts": {
+      "downloaded": 2,
+      "blocked": 0,
+      "metadata": 4,
+      "unavailable": 0
+    },
+    "categories": [
+      "Efficiency",
+      "Medical Imaging"
+    ],
+    "groups": {
+      "paper": [
+        "Main Conference"
+      ],
+      "poster": [],
+      "workshop": []
+    },
+    "embedding": {
+      "status": "fresh",
+      "recordCount": 6,
+      "mapRecordCount": 6,
+      "staleReasons": []
+    }
+  }
+}

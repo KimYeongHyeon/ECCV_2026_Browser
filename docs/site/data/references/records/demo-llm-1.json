@@ -1,0 +1,41 @@
+{
+  "title": "Sparse Attention Serving for Long-Context Language Models",
+  "referenceCount": 3,
+  "references": [
+    {
+      "title": "Vaswani et al",
+      "year": "2017",
+      "source": "",
+      "key": "1 vaswani et al attention is all you need neurips 2017"
+    },
+    {
+      "title": "[2] He et al. Deep Residual Learning for Image Recognition. CVPR 2015.",
+      "year": "2015",
+      "source": "",
+      "key": "2 he et al deep residual learning for image recognition cvpr 2015"
+    },
+    {
+      "title": "Chen et al",
+      "year": "2024",
+      "source": "",
+      "key": "3 chen et al chunked kv cache scheduling for long contexts mlsys 2024"
+    }
+  ],
+  "overlaps": [
+    {
+      "recordId": "demo-llm-2",
+      "sharedCount": 2,
+      "score": 0.6667,
+      "references": [
+        {
+          "title": "Vaswani et al",
+          "key": "1 vaswani et al attention is all you need neurips 2017"
+        },
+        {
+          "title": "[2] He et al. Deep Residual Learning for Image Recognition. CVPR 2015.",
+          "key": "2 he et al deep residual learning for image recognition cvpr 2015"
+        }
+      ]
+    }
+  ]
+}

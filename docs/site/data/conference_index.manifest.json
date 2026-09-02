@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-09-02T13:45:51.261Z",
+  "indexArtifactFingerprint": "sha256:dc7637b3a3d7384bf741298697cac87c89ef15a0694d88c3547d47584e9934c4",
+  "peopleTopicsArtifactFingerprint": "sha256:a7ce72f19224de0ca0dabeea377ff8edcb458f5ca7656a3fc9137d57f527d55b",
+  "summary": {
+    "total": 6,
+    "typeCounts": {
+      "paper": 6
+    },
+    "assetCounts": {
+      "pdf": 2,
+      "poster": 0,
+      "slide": 0
+    },
+    "availabilityCounts": {
+      "downloaded": 2,
+      "blocked": 0,
+      "metadata": 4,
+      "unavailable": 0
+    },
+    "categories": [
+      "Efficiency",
+      "Medical Imaging"
+    ],
+    "groups": {
+      "paper": [
+        "Main Conference"
+      ],
+      "poster": [],
+      "workshop": []
+    },
+    "embedding": {
+      "status": "fresh",
+      "recordCount": 6,
+      "mapRecordCount": 6,
+      "staleReasons": []
+    }
+  },
+  "startupUrl": "site/data/conference_startup.json",
+  "shards": [
+    {
+      "type": "paper",
+      "url": "site/data/shards/paper.json"
+    },
+    {
+      "type": "poster",
+      "url": "site/data/shards/poster.json"
+    },
+    {
+      "type": "workshop",
+      "url": "site/data/shards/workshop.json"
+    }
+  ]
+}

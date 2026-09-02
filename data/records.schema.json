@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://conference-atlas.local/schemas/record.json",
+  "title": "Conference Atlas normalized record",
+  "type": "object",
+  "required": ["id", "type", "title", "sourceType", "sourceUrl", "sourceCheckedAt"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "type": {"enum": ["paper", "poster", "workshop"]},
+    "title": {"type": "string", "minLength": 1},
+    "abstract": {"type": "string"},
+    "authors": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+    "authorAffiliations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["author", "institution", "sourceUrl"],
+        "properties": {
+          "author": {"type": "string"},
+          "institution": {"type": "string"},
+          "institutionId": {"type": "string"},
+          "countryCode": {"type": "string", "pattern": "^[A-Z]{2}$"},
+          "sourceUrl": {"type": "string"}
+        }
+      }
+    },
+    "searchAliases": {"type": "array", "items": {"type": "string"}},
+    "sourceType": {"type": "string", "minLength": 1},
+    "sourceUrl": {"type": "string", "minLength": 1},
+    "sourceCheckedAt": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

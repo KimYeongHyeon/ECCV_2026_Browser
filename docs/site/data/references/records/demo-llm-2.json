@@ -1,0 +1,41 @@
+{
+  "title": "Quantized LoRA Fine-Tuning Under a Fixed Memory Budget",
+  "referenceCount": 3,
+  "references": [
+    {
+      "title": "Vaswani et al",
+      "year": "2017",
+      "source": "",
+      "key": "1 vaswani et al attention is all you need neurips 2017"
+    },
+    {
+      "title": "[2] He et al. Deep Residual Learning for Image Recognition. CVPR 2015.",
+      "year": "2015",
+      "source": "",
+      "key": "2 he et al deep residual learning for image recognition cvpr 2015"
+    },
+    {
+      "title": "Dettmers et al",
+      "year": "2023",
+      "source": "",
+      "key": "3 dettmers et al qlora efficient finetuning of quantized llms neurips 2023"
+    }
+  ],
+  "overlaps": [
+    {
+      "recordId": "demo-llm-1",
+      "sharedCount": 2,
+      "score": 0.6667,
+      "references": [
+        {
+          "title": "Vaswani et al",
+          "key": "1 vaswani et al attention is all you need neurips 2017"
+        },
+        {
+          "title": "[2] He et al. Deep Residual Learning for Image Recognition. CVPR 2015.",
+          "key": "2 he et al deep residual learning for image recognition cvpr 2015"
+        }
+      ]
+    }
+  ]
+}

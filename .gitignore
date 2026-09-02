@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.cache/
+docs/pdfs/
+data/snapshots/*
+!data/snapshots/.gitkeep
+
+# Rust build artifacts
+rust/pdf-extract/target/

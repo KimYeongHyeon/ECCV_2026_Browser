@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "conference-atlas-concepts/v1",
+  "fingerprints": {
+    "artifact": "sha256:96f2eb08171c90a767131ef0a1bf68a6a6c4c3fc1a2a52d6c9af35b97c6b1d6f"
+  },
+  "records": {
+    "demo-llm-1": {
+      "core": [
+        "serving",
+        "sparse",
+        "attention"
+      ],
+      "detail": [
+        "long-context",
+        "sparse attention",
+        "serving long-context",
+        "long-context language",
+        "language",
+        "language models"
+      ]
+    },
+    "demo-llm-2": {
+      "core": [
+        "quantized",
+        "lora",
+        "fine-tuning"
+      ],
+      "detail": [
+        "under",
+        "budget",
+        "quantized lora",
+        "memory budget",
+        "memory",
+        "fixed"
+      ]
+    },
+    "demo-llm-3": {
+      "core": [
+        "draft",
+        "speculative",
+        "decoding"
+      ],
+      "detail": [
+        "on-device",
+        "inference",
+        "speculative decoding",
+        "draft models",
+        "on-device inference",
+        "decoding draft"
+      ]
+    },
+    "demo-med-1": {
+      "core": [
+        "organ",
+        "foundation",
+        "abdominal"
+      ],
+      "detail": [
+        "segmentation",
+        "foundation models",
+        "models abdominal",
+        "abdominal organ",
+        "organ segmentation",
+        "evaluate"
+      ]
+    },
+    "demo-med-2": {
+      "core": [
+        "mri",
+        "harmonization",
+        "style"
+      ],
+      "detail": [
+        "priors",
+        "style priors",
+        "cross-vendor",
+        "cross-vendor mri",
+        "mri harmonization",
+        "harmonization style"
+      ]
+    },
+    "demo-med-3": {
+      "core": [
+        "federated",
+        "reports",
+        "learning"
+      ],
+      "detail": [
+        "multi-institution",
+        "radiology",
+        "federated learning",
+        "learning multi-institution",
+        "multi-institution radiology",
+        "radiology reports"
+      ]
+    }
+  },
+  "review": {},
+  "source": {
+    "recordCount": 6,
+    "generator": "auto-first-pass/v1"
+  },
+  "summary": {
+    "candidateRecordCount": 6,
+    "publishedRecordCount": 6,
+    "excludedRecordCount": 0,
+    "exclusionCounts": {}
+  },
+  "generatedAt": "2026-09-02T13:45:51.261Z"
+}

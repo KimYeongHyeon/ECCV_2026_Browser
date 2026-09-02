@@ -1,0 +1,11 @@
+{
+  "slug": "conference-2026",
+  "name": "Conference 2026",
+  "atlas_title": "Conference Atlas",
+  "year": 2026,
+  "locale": "en",
+  "timezone": "UTC",
+  "repository": "KimYeongHyeon/Conference_Atlas_Template",
+  "official_url": "https://example.org",
+  "public_note": "Unofficial public browser built from cited public sources."
+}
