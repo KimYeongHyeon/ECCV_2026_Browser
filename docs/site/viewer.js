@@ -1,7 +1,6 @@
 import { assetUrl as configAssetUrl } from "./config.js";
 import { els } from "./dom.js";
 import {
-  assetLabel,
   displayAvailabilityLabel,
   openReviewPdfUrl,
   paperPresentationKind,
@@ -109,13 +108,19 @@ function renderSourcePageFallback(record, sourceUrl, message) {
   `;
 }
 
-function renderViewerStatusRow(record, title, message) {
+function renderViewerStatusRow(record, title, message, statusClass = "") {
   return `
-    <div class="viewer-status-row status-${escapeHtml(record.availabilityStatus || "metadata")}">
+    <div class="viewer-status-row ${escapeHtml(statusClass || `status-${record.availabilityStatus || "metadata"}`)}">
       <strong>${escapeHtml(title)}</strong>
       <span>${escapeHtml(message)}</span>
     </div>
   `;
+}
+
+function fullTextMessage(record) {
+  if (record.pdfUrl) return "The PDF opens in a new tab — the abstract is shown below.";
+  if (record.type === "workshop") return "The workshop PDF opens in a new tab — the abstract is shown below.";
+  return "The full text is not public yet — the abstract is shown below, and the links above open the official sources.";
 }
 
 function renderPosterPreview(record, assetPath) {
@@ -305,40 +310,34 @@ export function renderViewer(record) {
   ].join("");
   els.viewerActions.innerHTML = actions;
 
+  let abstractFirst = false;
   if (preferred && record.bestAssetKind === "poster") {
     els.viewerFrame.innerHTML = renderPosterPreview(record, preferred);
   } else if (preferred && (record.bestAssetKind === "pdf" || record.bestAssetKind === "slide")) {
     els.viewerFrame.innerHTML = renderAssetOpenFallback(record, preferred, assetUrl(preferred));
     void mountPdfViewer(preferred);
   } else if (fallbackPageUrl(record)) {
-    const sourceUrl = fallbackPageUrl(record);
-    const message = record.type === "paper" && openReviewPdfUrl(record)
-      ? "OpenReview PDF may open in your browser session. It cannot be embedded here because OpenReview blocks framing and cross-origin preview."
-      : record.type === "workshop" && record.pdfUrl
-      ? "This workshop paper PDF is hosted on OpenReview and opens in a new tab — it can't be embedded here due to OpenReview's framing policy."
-      : record.failureReason || "No local PDF, poster image, or slide deck was collected, so the source page is used instead.";
-    els.viewerFrame.innerHTML = renderSourcePageFallback(record, sourceUrl, message);
+    abstractFirst = true;
+    els.viewerFrame.innerHTML = renderViewerStatusRow(record, "Full text", fullTextMessage(record), "status-neutral");
   } else {
-    let title = assetLabel(record);
+    abstractFirst = true;
+    let title = "Full text";
     let message = "No public local media file was collected for this record.";
     if (record.availabilityStatus === "blocked") {
-      title = record.type === "paper" ? "OpenReview PDF" : "Blocked";
-      message = record.failureReason || (record.type === "paper"
-        ? "The accepted paper metadata is public. OpenReview PDFs may open in a logged-in browser session, but cannot be embedded or downloaded by the static site."
-        : "The source was checked, but the material is not publicly downloadable yet or blocked the download.");
+      message = record.failureReason || "The full text is not publicly downloadable yet — use the links above when it becomes available.";
     } else if (record.availabilityStatus === "metadata") {
-      title = "Metadata only";
-      message = record.type === "paper"
-        ? "The main-conference paper PDFs are not public in the collected official sources yet."
-        : "The source exposed metadata, but no downloadable media file.";
+      message = "The full text is not public in the collected official sources yet — use the links above when it becomes available.";
     } else if (record.availabilityStatus === "unavailable") {
-      title = "Unavailable / skipped";
       message = record.failureReason || "The linked source was not a direct downloadable material.";
     }
-    els.viewerFrame.innerHTML = renderViewerStatusRow(record, title, message);
+    els.viewerFrame.innerHTML = renderViewerStatusRow(record, title, message, "status-neutral");
   }
   const abstractBlock = renderAbstractBlock(record);
-  if (abstractBlock) els.viewerFrame.insertAdjacentHTML("beforeend", abstractBlock);
+  if (abstractBlock) {
+    // Abstract-first: when no embeddable PDF exists, the abstract IS the
+    // preview area, so put it at the top of the frame.
+    els.viewerFrame.insertAdjacentHTML(abstractFirst ? "afterbegin" : "beforeend", abstractBlock);
+  }
   els.viewerFrame.querySelector(".poster-zoom-toggle")?.addEventListener("click", (event) => {
     const button = event.currentTarget;
     const preview = button.closest(".poster-preview");

@@ -4873,3 +4873,13 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+.viewer-status-row.status-neutral {
+  border-color: #d8e0da;
+  background: #f4f7f5;
+  color: #33413a;
+}
+
+.viewer-status-row.status-neutral strong {
+  color: #2c4a3b;
+}
