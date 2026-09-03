@@ -1,7 +1,7 @@
 {
   "schemaVersion": "conference-atlas-concepts/v1",
   "fingerprints": {
-    "artifact": "sha256:f8ba9776025920d32ecfd32da222dbca0596063bc147882897e4b5d29321c5ec"
+    "artifact": "sha256:6a5b9e79081d37d65a85ab51e1681866f5c3e6fbeb263e8781bb778e1a82bcd4"
   },
   "records": {
     "eccv-4260": {
@@ -37344,5 +37344,5 @@
     "excludedRecordCount": 0,
     "exclusionCounts": {}
   },
-  "generatedAt": "2026-09-03T02:59:47.305Z"
+  "generatedAt": "2026-09-03T03:16:02.706Z"
 }

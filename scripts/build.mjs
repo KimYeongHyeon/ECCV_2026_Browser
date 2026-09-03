@@ -63,16 +63,22 @@ Options:
   --records PATH  Metadata CSV or JSONL (default: data/source/records.csv, then records.jsonl)
   --output PATH   Static artifact directory (default: docs/site/data)
   --force         Ignore warm-start caches and rebuild everything
+  --local-pdfs    Wire data/pdfs into the viewer (local preview only; deployed
+                  sites link arXiv/official PDFs instead)
   --help          Show this help`;
 }
 
 function parseArguments(argv) {
-  const options = { config: "config/conference.json", records: "", output: "docs/site/data", force: false };
+  const options = { config: "config/conference.json", records: "", output: "docs/site/data", force: false, localPdfs: false };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     if (argument === "--help") return { ...options, help: true };
     if (argument === "--force") {
       options.force = true;
+      continue;
+    }
+    if (argument === "--local-pdfs") {
+      options.localPdfs = true;
       continue;
     }
     if (!["--config", "--records", "--output"].includes(argument)) {
@@ -318,10 +324,16 @@ async function build(options) {
   await mkdir(cacheDir, { recursive: true });
 
   // ---- Load metadata, then ingest PDFs ----
+  // PDFs are opt-in for wiring (--local-pdfs): the committed/deployed
+  // artifacts must not reference data/pdfs files that GitHub Pages does not
+  // publish. Run with --local-pdfs for a local preview build that wires the
+  // in-repo PDFs into the viewer.
   const sourceCheckedAt = "2026-01-01T00:00:00Z";
   let { records, text: recordsText, path: recordsPath } = await loadRawRecords(options.records, sourceCheckedAt);
 
-  const ingest = await ingestPdfs({ root: ROOT, records, cacheDir: path.join(cacheDir, "pdf"), docsPdfDir });
+  const ingest = options.localPdfs
+    ? await ingestPdfs({ root: ROOT, records, cacheDir: path.join(cacheDir, "pdf"), docsPdfDir })
+    : { records, report: { found: 0, extracted: 0, reused: 0, failed: 0, copied: 0, referencesTotal: 0 }, referencesByRecord: new Map() };
   records = ingest.records;
   for (const record of records) {
     if (record.localPdfFile) {

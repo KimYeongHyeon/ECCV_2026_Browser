@@ -9,3 +9,4 @@ data/snapshots/*
 
 # Rust build artifacts
 rust/pdf-extract/target/
+data/pdfs/

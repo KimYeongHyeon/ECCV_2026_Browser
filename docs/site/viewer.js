@@ -301,13 +301,13 @@ export function renderViewer(record) {
   const preferred = record.bestAsset || "";
   const localAsset = record.localPdfPath || record.localSlidePath || record.localPosterPath;
   const actions = [
-    actionLink(assetActionHref(record, localAsset), assetActionLabel(record), true),
-    actionLink(openReviewPdfUrl(record), record.type === "paper" && !record.localPdfPath ? "OpenReview PDF" : "Open PDF", record.type === "paper" && !localAsset),
+    localAsset ? actionLink(assetActionHref(record, localAsset), assetActionLabel(record), true) : "",
+    !localAsset && record.pdfUrl ? actionLink(record.pdfUrl, "Open PDF (arXiv)", true) : "",
     actionLink(record.pageUrl, "Official page"),
     actionLink(record.doiUrl, "DOI"),
-    actionLink(record.openreviewUrl, "OpenReview"),
-    actionLink(record.projectPageUrl, "Project"),
-  ].join("");
+    record.openreviewUrl ? actionLink(record.openreviewUrl, "OpenReview") : "",
+    record.projectPageUrl ? actionLink(record.projectPageUrl, "Project") : "",
+  ].filter(Boolean).join("");
   els.viewerActions.innerHTML = actions;
 
   let abstractFirst = false;

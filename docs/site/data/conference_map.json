@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-03T02:59:47.305Z",
+  "generatedAt": "2026-09-03T03:16:02.706Z",
   "embeddingSource": {
     "method": "tfidf-deterministic",
-    "fingerprint": "sha256:a197a3f29ded04c1f583eee8c6517802c0a94220da9ff6ce4e21c570018717b2",
+    "fingerprint": "sha256:9b658ced9f7763b65e2cc8025ebb0d26bddd592fa7e267b19c0d0d15c4789b77",
     "note": "Zero-dependency first pass. Import SPECTER2 vectors via scripts/import_search_embeddings.mjs for stronger query semantics."
   },
   "model": {

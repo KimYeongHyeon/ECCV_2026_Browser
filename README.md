@@ -84,7 +84,10 @@ Rows here are merged over PDF-extracted references for the same `recordId`.
 ## Quickstart
 
 ```bash
-npm run build      # ingest CSV + PDFs, run semantic pipeline, write all artifacts
+npm run build      # ingest CSV + arXiv metadata, semantic pipeline, all artifacts
+# (PDFs in data/pdfs are detected automatically on rebuild; add --local-pdfs to
+#  wire them into the in-browser viewer for local preview — deployed sites
+#  link arXiv/official PDFs instead to stay under the Pages size limit)
 npm run verify     # validate artifact contracts and fingerprints
 npm run preview    # serve the site at http://localhost:8000/
 ```
