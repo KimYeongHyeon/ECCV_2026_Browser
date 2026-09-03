@@ -8,6 +8,7 @@
 // schema can replace it at any time.
 
 import { displayForms, normalizeWhitespace, tokenizeWithBigrams } from "./text.mjs";
+import { topicLabelsFor } from "./lda.mjs";
 
 function candidatePhrases(record) {
   const title = normalizeWhitespace(record.title);
@@ -33,7 +34,7 @@ function candidatePhrases(record) {
   return score;
 }
 
-export function buildConceptArtifact(records) {
+export function buildConceptArtifact(records, topicModel = null) {
   const corpusScores = new Map();
   const perRecord = records.map((record) => candidatePhrases(record));
   for (const scores of perRecord) {
@@ -47,8 +48,17 @@ export function buildConceptArtifact(records) {
       .map(([phrase, weight]) => ({ phrase, weight: weight * Math.log(1 + total / (corpusScores.get(phrase) || 1)) }))
       .sort((left, right) => right.weight - left.weight)
       .map(({ phrase }) => phrase);
-    const core = ranked.slice(0, 3).map(normalizeWhitespace).filter(Boolean);
-    const detail = ranked.slice(3, 9).map(normalizeWhitespace).filter(Boolean);
+    // Core concepts come from the corpus-level topic model so the Topics view
+    // shows a meaningful number of shared topics instead of thousands of
+    // per-paper phrases; per-paper distinctive phrases become detail concepts.
+    let core = topicModel ? topicLabelsFor(record.id, topicModel) : [];
+    core = core.map(normalizeWhitespace).filter(Boolean);
+    const detail = ranked
+      .filter((phrase) => !core.includes(phrase))
+      .slice(0, 6)
+      .map(normalizeWhitespace)
+      .filter(Boolean);
+    if (!core.length) core = ranked.slice(0, 3).map(normalizeWhitespace).filter(Boolean);
     if (!core.length) core.push(normalizeWhitespace(record.category) || "General");
     conceptRecords[record.id] = { core, detail };
   });
@@ -57,7 +67,10 @@ export function buildConceptArtifact(records) {
     fingerprints: { artifact: "" },
     records: conceptRecords,
     review: {},
-    source: { recordCount: records.length, generator: "auto-first-pass/v1" },
+    source: {
+      recordCount: records.length,
+      generator: topicModel ? `nmf-topics/v1 (K=${topicModel.topics.length})` : "auto-first-pass/v1",
+    },
     summary: {
       candidateRecordCount: records.length,
       publishedRecordCount: records.length,

@@ -19,6 +19,7 @@ import process from "node:process";
 import { fileURLToPath } from "node:url";
 
 import { buildConceptArtifact } from "./lib/concepts.mjs";
+import { deserializeModel, modelTopics, serializeModel } from "./lib/lda.mjs";
 import { parseCsv, recordsFromCsvRows } from "./lib/csv.mjs";
 import { ingestPdfs } from "./lib/ingest.mjs";
 import { buildReferenceArtifacts } from "./lib/references.mjs";
@@ -41,6 +42,18 @@ import { buildTrends } from "./lib/trends.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SEMANTIC_PIPELINE_VERSION = 2;
 const EMAIL_PATTERN = /\b[^\s@]+@[^\s@]+\.[^\s@]+\b/u;
+// Recursive per-string scan: testing one regex against the entire serialized
+// artifact (tens of MB) risks catastrophic backtracking; bounded strings are
+// fast and just as safe.
+function containsEmail(value) {
+  if (Array.isArray(value)) return value.some(containsEmail);
+  if (value && typeof value === "object") {
+    return Object.entries(value).some(([key, nested]) => (
+      key === "email" || key === "authorEmails" || containsEmail(nested)
+    ));
+  }
+  return typeof value === "string" && value.length < 4096 && EMAIL_PATTERN.test(value);
+}
 
 function usage() {
   return `Usage: node scripts/build.mjs [options]
@@ -360,6 +373,32 @@ async function build(options) {
     await mkdir(path.dirname(semanticCachePath), { recursive: true });
     await writeFile(semanticCachePath, `${JSON.stringify(semantic)}\n`, "utf8");
   }
+
+  // ---- Topic model (cached independently; drives the Topics view) ----
+  const topicCacheKey = semanticFingerprint({
+    version: 1,
+    docs: records.map((record) => [record.id, record.title, record.abstract, record.categoryTags]),
+  });
+  const topicCachePath = path.join(cacheDir, `topics-${topicCacheKey}.json`);
+  let topicModel = options.force ? null : deserializeModel(await readJsonIfExists(topicCachePath));
+  const topicWarm = Boolean(topicModel);
+  if (!topicModel && records.length) {
+    // Seed NMF with the k-means assignments to prevent topic collapse.
+    const primaryLevel = semantic.levels.find((level) => level.k === semantic.primaryK) || semantic.levels[0];
+    const clusterOrder = new Map();
+    const assignments = new Map();
+    semantic.mapRecords.forEach((mapRecord, index) => {
+      const clusterId = primaryLevel.assignments[index];
+      if (!clusterOrder.has(clusterId)) clusterOrder.set(clusterId, clusterOrder.size);
+      assignments.set(mapRecord.id, clusterOrder.get(clusterId));
+    });
+    topicModel = modelTopics(records, { assignments, topics: Math.max(40, clusterOrder.size) });
+    await mkdir(path.dirname(topicCachePath), { recursive: true });
+    await writeFile(topicCachePath, `${JSON.stringify(serializeModel(topicModel), null, 2)}\n`, "utf8");
+  }
+  if (topicModel) {
+    console.log(`  topics: ${topicModel.topics.length} modeled from ${records.length} records (sizes ${topicModel.topics[0]?.size ?? 0}…${topicModel.topics[topicModel.topics.length - 1]?.size ?? 0})`);
+  }
   if (semantic) {
     const primaryLevel = semantic.levels.find((level) => level.k === semantic.primaryK) || semantic.levels[0];
     const clusterById = new Map(semantic.clusters.map((cluster) => [cluster.id, cluster]));
@@ -403,7 +442,7 @@ async function build(options) {
   // ---- Concepts + people topics (People/Topics tabs) ----
   let peopleTopicsArtifactFingerprint = "";
   if (records.length) {
-    const conceptArtifact = buildConceptArtifact(records);
+    const conceptArtifact = buildConceptArtifact(records, topicModel);
     conceptArtifact.generatedAt = generatedAt;
     conceptArtifact.fingerprints = { artifact: sha256Fingerprint(JSON.stringify(conceptArtifact)) };
     await writeJson(path.join(output, "concepts", "conference_concepts.json"), conceptArtifact);
@@ -417,7 +456,7 @@ async function build(options) {
       artifact: sha256Fingerprint(JSON.stringify(peopleArtifact)),
       conceptArtifact: conceptArtifact.fingerprints.artifact,
     };
-    if (EMAIL_PATTERN.test(JSON.stringify(peopleArtifact))) {
+    if (containsEmail(peopleArtifact)) {
       throw new Error("Refusing to publish an analysis artifact containing email addresses.");
     }
     const peoplePath = path.join(output, "analysis", "conference_people_topics.json");

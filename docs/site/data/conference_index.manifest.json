@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-09-02T15:03:02.172Z",
-  "indexArtifactFingerprint": "sha256:eca476be79fb60f5141ceb6c111d118596484eb672bc4a555cee3489e991cdb2",
-  "peopleTopicsArtifactFingerprint": "sha256:a183bff38bc8b5eab3b5a3b01ea80c6a8dc6de87eba252138ecb1a5cebf61020",
+  "generatedAt": "2026-09-03T02:59:47.305Z",
+  "indexArtifactFingerprint": "sha256:a197a3f29ded04c1f583eee8c6517802c0a94220da9ff6ce4e21c570018717b2",
+  "peopleTopicsArtifactFingerprint": "sha256:d3c0334b219db6b0d6e451d3564b719a82a375749214f913747d7e1482549d3e",
   "summary": {
     "total": 2864,
     "typeCounts": {
       "paper": 2864
     },
     "assetCounts": {
-      "pdf": 0,
+      "pdf": 1826,
       "poster": 0,
       "slide": 0
     },
     "availabilityCounts": {
-      "downloaded": 0,
+      "downloaded": 1826,
       "blocked": 0,
-      "metadata": 2864,
+      "metadata": 1038,
       "unavailable": 0
     },
     "categories": [
