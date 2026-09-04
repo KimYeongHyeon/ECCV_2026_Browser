@@ -82,16 +82,22 @@ async function fetchBatch(batchIndex, titles) {
     .join("+OR+");
   const url = `https://export.arxiv.org/api/query?search_query=${query}&start=0&max_results=${MAX_RESULTS}`;
   let body = "";
-  for (let attempt = 1; attempt <= 4; attempt += 1) {
+  // arXiv enforces rolling cooldowns (HTTP 429) after heavy use; back off in
+  // long steps instead of hammering, and give up only after ~10 minutes.
+  const delays = [30_000, 60_000, 120_000, 300_000];
+  for (let attempt = 0; attempt <= delays.length; attempt += 1) {
+    if (attempt > 0) {
+      process.stderr.write(`  retry batch ${batchIndex} in ${delays[attempt - 1] / 1000}s (attempt ${attempt}/${delays.length})\n`);
+      await sleep(delays[attempt - 1]);
+    }
     try {
       const response = await fetch(url, { headers: { "user-agent": USER_AGENT } });
+      if (response.status === 429) throw new Error("HTTP 429 (rate limited)");
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       body = await response.text();
       break;
     } catch (error) {
-      if (attempt >= 4) throw error;
-      process.stderr.write(`  retry batch ${batchIndex} after error: ${error.message}\n`);
-      await sleep(REQUEST_DELAY_MS * attempt);
+      if (attempt >= delays.length) throw error;
     }
   }
   const payload = body.includes("<entry>") ? body : "<!-- empty -->";
